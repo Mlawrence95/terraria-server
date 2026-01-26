@@ -10,12 +10,12 @@ start_server_in_background() {
   else
     echo "Starting Terraria server in tmux session..."
 
-    # Start the tmux session with the server command
+    # Start the tmux session with the server command, passing the flags explicitly
     tmux new-session -d -s "$TMUX_SESSION_NAME" bash -c "
       source ~/terraria/terraria-server/scripts/shared_variables.sh;
       STATIC_FLAGS='-config ${SERVER_CONFIG_PATH}';
       echo 'Starting Terraria server with flags: $STATIC_FLAGS';
-      \"$SERVER_BINARY_PATH\" $STATIC_FLAGS;
+      \"$SERVER_BINARY_PATH\" \$STATIC_FLAGS;
       bash"  # Keep tmux session open for further commands after server exits
 
     echo "Server started in tmux session '$TMUX_SESSION_NAME'."
@@ -25,5 +25,6 @@ start_server_in_background() {
 }
 
 
+cp ${SERVER_CONFIG_PATH} ${EXE_ROOT}
 
 start_server_in_background

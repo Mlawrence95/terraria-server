@@ -5,7 +5,8 @@ echo "Resolved workspace root path to ${WORKSPACE_ROOT}"
 SERVER_URL=https://terraria.org/api/download/pc-dedicated-server/terraria-server-1449.zip
 VERSION_SHORTNAME=1449
 
-SERVER_BINARY_PATH=${WORKSPACE_ROOT}/${VERSION_SHORTNAME}/Linux/TerrariaServer.bin.x86_64
+EXE_ROOT=${WORKSPACE_ROOT}/${VERSION_SHORTNAME}/Linux/
+SERVER_BINARY_PATH=${EXE_ROOT}/TerrariaServer.bin.x86_64
 
 TMUX_SESSION_NAME="terraria-server-session"
 
