@@ -1,7 +1,7 @@
 # Realistically, copy and paste this into your command line
 
 # Basic dependencies
-DEPENDENCIES=(wget tmux unzip git)
+DEPENDENCIES=(wget tmux unzip git screen)
 sudo apt update && sudo apt install -y "${DEPENDENCIES[@]}"
 
 # Set up path for terraria files (doesnt have to be here tho)

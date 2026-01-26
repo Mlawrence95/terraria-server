@@ -4,24 +4,13 @@ source ~/terraria/terraria-server/scripts/shared_variables.sh
 set -ex
 
 start_server_in_background() {
-  # Check if a tmux session is already running
-  if tmux has-session -t "$TMUX_SESSION_NAME" 2>/dev/null; then
-    echo "tmux session '$TMUX_SESSION_NAME' is already running!"
-  else
-    echo "Starting Terraria server in tmux session..."
+  echo "Starting Terraria server in a screen session..."
 
-    # Start the tmux session with the server command, passing the flags explicitly
-    tmux new-session -d -s "$TMUX_SESSION_NAME" bash -c "
-      source ~/terraria/terraria-server/scripts/shared_variables.sh;
-      STATIC_FLAGS='-config ${SERVER_CONFIG_PATH}';
-      echo 'Starting Terraria server with flags: $STATIC_FLAGS';
-      \"$SERVER_BINARY_PATH\" \$STATIC_FLAGS;
-      bash"  # Keep tmux session open for further commands after server exits
+  # Create a new screen session and run the Terraria server
+  screen -dmS terraria-server "$SERVER_BINARY_PATH" -config "$SERVER_CONFIG_PATH"
 
-    echo "Server started in tmux session '$TMUX_SESSION_NAME'."
-    echo "To detach from tmux, press <Ctrl+b> then d."
-    echo "To reattach to the tmux session, run: tmux attach -t $TMUX_SESSION_NAME"
-  fi
+  echo "Server started in screen session 'terraria-server'."
+  echo "To reattach to the screen session, run: screen -r terraria-server"
 }
 
 
