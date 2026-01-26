@@ -1,5 +1,5 @@
 # Load constants
-source ./shared_variables.sh
+source ~/terraria/terraria-server/scripts/shared_variables.sh
 
 run_terraria_server_with_flags() {
   STATIC_FLAGS="-config ${SERVER_CONFIG_PATH} -world ${WORLD_SAVES_PATH}"

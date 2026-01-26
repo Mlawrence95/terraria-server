@@ -3,7 +3,7 @@
 # bash install_terraria_server_binary.sh
 
 # Load constants
-source ./shared_variables.sh
+source ~/terraria/terraria-server/scripts/shared_variables.sh
 
 # Download and extract the server binary
 wget ${SERVER_URL}
