@@ -1,6 +1,8 @@
 # Load constants
 source ~/terraria/terraria-server/scripts/shared_variables.sh
 
+set -ex
+
 run_terraria_server_with_flags() {
   STATIC_FLAGS="-config ${SERVER_CONFIG_PATH}"
   # Run the server binary with the static flags
