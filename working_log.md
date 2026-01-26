@@ -32,4 +32,10 @@ New Terraria version coming in 2 days. Will likely come with a new server versio
   * "Enable" Compute Engine API from its product page
   * Create new Compute Engine instance. E2-medium in a data center near my friends and I (US West).
   
-![](./photos/cloud_console.png)
+![](./docs/cloud_console.png)
+
+* Begin test server set up (can click into SSH in browser from Cloud console)
+* open github repo to public at https://github.com/Mlawrence95/terraria-server.git
+* Created `initial_installation.sh` to pull in github files
+* Created `scripts/install_terraria_server_binary.sh` for loading and formatting server binaries
+* Created `scripts/shared_variables.sh` to keep constants in sync across files
