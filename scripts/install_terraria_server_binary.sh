@@ -14,7 +14,7 @@ update_worldpath_in_config() {
     if grep -q "^#worldpath=" "$config_file"; then
       echo "Updating worldpath in config to $new_worldpath..."
       # Replace #worldpath=... with the new worldpath
-      sed -i "s/^#worldpath=.*/worldpath=$new_worldpath/" "$config_file"
+      sed -i "s|^#worldpath=.*|worldpath=$new_worldpath|" "$config_file"
     else
       echo "No worldpath line found, adding new worldpath."
       # If no #worldpath is found, append the new worldpath at the end of the file
@@ -22,6 +22,7 @@ update_worldpath_in_config() {
     fi
   fi
 }
+
 
 # Load constants
 source ~/terraria/terraria-server/scripts/shared_variables.sh
