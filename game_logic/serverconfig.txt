@@ -52,6 +52,7 @@ password=openup
 motd=Embrace the dirt hole
 
 #Sets the folder where world files will be stored
+# defaults to somewhere in ~/.local/
 #worldpath=C:\Users\Defaults\My Documents\My Games\Terraria\Worlds\
 
 #Sets the number of rolling world backups to keep

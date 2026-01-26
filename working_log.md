@@ -26,19 +26,26 @@ New Terraria version coming in 2 days. Will likely come with a new server versio
 
 ### Execution
 
+For GCP setup, mostly following this [guide](https://docs.google.com/document/d/1KZofwemfcQQCOVlWw4VxOn8MArTOauFWC5EVQvsF_Aw/edit?tab=t.0)
+
 * Made Google Cloud project here to host the VM: https://console.cloud.google.com/welcome?project=terraria-server-485500
   * Set up billing
   * Set billing alert for this project. If costs approach $30 per month, email me
   * "Enable" Compute Engine API from its product page
   * Create new Compute Engine instance. E2-medium in a data center near my friends and I (US West).
-  * Created static external IP address to make connecting easy
+    * Added "terraria" network tag on the compute instance
+  * Created static external IP address to make connecting consistent for users
+  * Added firewall rule (not firewall policy) where i allow all traffic on port 7777 for the "terraria" network tag
   
 ![](./docs/cloud_console.png)
 
 ![](./docs/static_ip.png)
+
+![](./docs/firewall.PNG)
 
 * Begin test server set up (can click into SSH in browser from Cloud console)
 * open github repo to public at https://github.com/Mlawrence95/terraria-server.git
 * Created `initial_installation.sh` to pull in github files
 * Created `scripts/install_terraria_server_binary.sh` for loading and formatting server binaries
 * Created `scripts/shared_variables.sh` to keep constants in sync across files
+* Created `scripts/run_server.sh` to start the server up.

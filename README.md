@@ -1,5 +1,11 @@
 # Hosting a Terraria Server on the Cloud
 
+Basic flow:
+
+* Follow steps in working_log.md to set up GCP project
+* SSH into Compute Engine instance
+* run `initial_installation.sh` to setup foundational dependencies
+* 
 
 ## Sources
 
