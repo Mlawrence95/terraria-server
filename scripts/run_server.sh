@@ -22,3 +22,6 @@ start_server_in_background() {
     echo "To reattach to the tmux session, run: tmux attach -t $TMUX_SESSION_NAME"
   fi
 }
+
+
+start_server_in_background

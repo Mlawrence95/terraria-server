@@ -31,8 +31,11 @@ New Terraria version coming in 2 days. Will likely come with a new server versio
   * Set billing alert for this project. If costs approach $30 per month, email me
   * "Enable" Compute Engine API from its product page
   * Create new Compute Engine instance. E2-medium in a data center near my friends and I (US West).
+  * Created static external IP address to make connecting easy
   
 ![](./docs/cloud_console.png)
+
+![](./docs/static_ip.png)
 
 * Begin test server set up (can click into SSH in browser from Cloud console)
 * open github repo to public at https://github.com/Mlawrence95/terraria-server.git
