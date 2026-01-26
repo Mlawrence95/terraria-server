@@ -4,8 +4,8 @@ Basic flow:
 
 * Follow steps in working_log.md to set up GCP project
 * SSH into Compute Engine instance
-* run `initial_installation.sh` to setup foundational dependencies
-* 
+* run `initial_installation.sh` to setup foundational dependencies. you should just copy and paste this into the terminal on the cloud machine
+* now you can get the terraria files running, `flash_server.sh`
 
 ## Sources
 

@@ -1,4 +1,5 @@
 echo "Starting full flash of bare server."
+set -ex
 
 # Load constants
 source ~/terraria/terraria-server/scripts/shared_variables.sh
@@ -12,6 +13,6 @@ fi
 echo "Installing dependencies..."
 ${WORKSPACE_ROOT}/initial_installation.sh
 echo "Getting terraria server files and formatting them"
-${WORKSPACE_ROOT}/install_terraria_server_binary.sh
+${WORKSPACE_ROOT}/scripts/install_terraria_server_binary.sh
 echo "Attempting to start server..."
-${WORKSPACE_ROOT}/run_server.sh
+${WORKSPACE_ROOT}/scripts/run_server.sh

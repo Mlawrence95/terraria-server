@@ -14,3 +14,6 @@ git clone https://github.com/Mlawrence95/terraria-server.git
 
 # See all github files
 cd terraria-server
+
+# Find all scripts and apply executable permissions
+find . -type f -name "*.sh" -exec chmod +x {} \;
