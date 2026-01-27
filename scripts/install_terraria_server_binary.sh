@@ -21,9 +21,12 @@ unzip terraria-server*
 cd ${VERSION_SHORTNAME}/Linux
 chmod +x TerrariaServer.bin.x86*
 
-# Create path for world files
+# Create path for world files, give read/write perms
 mkdir -p ${WORLD_SAVES_PATH}
+chmod -R u+rwX ${WORLD_SAVES_PATH}
+
 # update_worldpath_in_config "${SERVER_CONFIG_PATH}" "${WORLD_SAVES_PATH}"
 
 # Create separate backups path
 mkdir -p ${BACKUPS_PATH}
+chmod -R u+rwX ${BACKUPS_PATH}
