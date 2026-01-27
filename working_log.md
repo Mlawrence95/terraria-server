@@ -24,6 +24,14 @@ then,
 
 This seems to do the trick. Now I need to find a way to verify the world persists, dont crash under load of a few players, etc
 
+I want to definitely address world rollbacks. I think I can copy a backup to `/home/mike_a_lawrence95/terraria/terraria-server/worlds/main_world_file.wld` if truly necessary. This file is also backed up by Terraria itself. See,
+
+```
+$ ls -a worlds/
+
+.  ..  main_world_file.wld  main_world_file.wld.bak  main_world_file.wld.bak2
+```
+
 ## 1/25/2026
 
 New Terraria version coming in 2 days. Will likely come with a new server version to install. This means any progress on setting up a server needs to be reusable.
