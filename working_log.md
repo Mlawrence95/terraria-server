@@ -32,6 +32,8 @@ $ ls -a worlds/
 .  ..  main_world_file.wld  main_world_file.wld.bak  main_world_file.wld.bak2
 ```
 
+Importantly, the server is now viable. It cost me $0.78 in the first day. This will work!
+
 ## 1/25/2026
 
 New Terraria version coming in 2 days. Will likely come with a new server version to install. This means any progress on setting up a server needs to be reusable.
