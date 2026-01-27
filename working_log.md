@@ -22,6 +22,8 @@ then,
 ./TerrariaServer.bin.x86_64 -config serverconfig.txt
 ```
 
+This seems to do the trick. Now I need to find a way to verify the world persists, dont crash under load of a few players, etc
+
 ## 1/25/2026
 
 New Terraria version coming in 2 days. Will likely come with a new server version to install. This means any progress on setting up a server needs to be reusable.
