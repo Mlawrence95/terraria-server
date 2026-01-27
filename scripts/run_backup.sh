@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set +ex
 # Load constants
 source ~/terraria/terraria-server/scripts/shared_variables.sh
 
