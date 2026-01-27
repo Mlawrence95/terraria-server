@@ -1,5 +1,27 @@
 # Working log
 
+## 1/26/2026
+
+Less time to work today. I solved an important bug! The server would not autocreate in headless mode yesterday. I tried everything. It turns out that autocreate requires an absolute world path to function! I got it to autocreate a server with a config like so:
+
+```
+world=/home/mike_a_lawrence95/terraria/terraria-server/worlds/the_lands_of_far.wld
+autocreate=3
+worldname=The Lands of Far
+difficulty=2
+
+maxplayers=5
+port=7777
+password=openup
+motd=Embrace the dirt hole
+```
+
+then, 
+
+```
+./TerrariaServer.bin.x86_64 -config serverconfig.txt
+```
+
 ## 1/25/2026
 
 New Terraria version coming in 2 days. Will likely come with a new server version to install. This means any progress on setting up a server needs to be reusable.

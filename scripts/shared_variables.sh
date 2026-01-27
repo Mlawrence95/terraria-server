@@ -11,7 +11,8 @@ SERVER_BINARY_PATH=${EXE_ROOT}/TerrariaServer.bin.x86_64
 TMUX_SESSION_NAME="terraria-server-session"
 
 SERVER_CONFIG_PATH=${WORKSPACE_ROOT}/game_logic/serverconfig.txt
-WORLD_SAVES_PATH=${WORKSPACE_ROOT}/worlds/
+WORLD_SAVES_PATH=${WORKSPACE_ROOT}/worlds
+WORLD_FILE_PATH=${WORLD_SAVES_PATH}/main_world_file.wld
 BACKUPS_PATH=~/backups/
 
 echo "Loaded constants from shared variables file!"
