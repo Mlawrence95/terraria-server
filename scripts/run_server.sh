@@ -11,6 +11,7 @@ start_server_in_background() {
 
   echo "Server started in screen session 'terraria-server'."
   echo "To reattach to the screen session, run: screen -r terraria-server"
+  echo "To leave session, use Ctrl + a  then  d"
 }
 
 echo "Inserting world path into server config file..."
