@@ -2,8 +2,8 @@ WORKSPACE_ROOT=$(realpath ~/terraria/terraria-server)
 
 echo "Resolved workspace root path to ${WORKSPACE_ROOT}"
 # Pick one from https://terraria.wiki.gg/wiki/Server#Server_files
-SERVER_URL=https://terraria.org/api/download/pc-dedicated-server/terraria-server-1449.zip
-VERSION_SHORTNAME=1449
+SERVER_URL=https://terraria.org/api/download/pc-dedicated-server/terraria-server-1450.zip
+VERSION_SHORTNAME=1450
 
 EXE_ROOT=${WORKSPACE_ROOT}/${VERSION_SHORTNAME}/Linux/
 SERVER_BINARY_PATH=${EXE_ROOT}/TerrariaServer.bin.x86_64

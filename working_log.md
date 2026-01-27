@@ -1,5 +1,9 @@
 # Working log
 
+## 1/27/2026
+
+Today is the day! I see 1.4.5.0 server files on the wiki site, and the steam client update is running. I am going to kill my existing `screen` client to tear down the test server, `rm -rf` my old files, and let the scripts run with `1450` for the latest server version. Fingers crossed.
+
 ## 1/26/2026
 
 Less time to work today. I solved an important bug! The server would not autocreate in headless mode yesterday. I tried everything. It turns out that autocreate requires an absolute world path to function! I got it to autocreate a server with a config like so:
