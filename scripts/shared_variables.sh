@@ -14,5 +14,6 @@ SERVER_CONFIG_PATH=${WORKSPACE_ROOT}/game_logic/serverconfig.txt
 WORLD_SAVES_PATH=${WORKSPACE_ROOT}/worlds
 WORLD_FILE_PATH=${WORLD_SAVES_PATH}/main_world_file.wld
 BACKUPS_PATH=~/backups/
+LOG_FILE_PATH=${WORKSPACE_ROOT}/server_logs.txt
 
 echo "Loaded constants from shared variables file!"
