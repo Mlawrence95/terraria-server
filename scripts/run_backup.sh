@@ -4,7 +4,7 @@ set +ex
 source ~/terraria/terraria-server/scripts/shared_variables.sh
 
 # Get current date and time in the format YYYY-MM-DD_HH-MM-SS
-TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+TIMESTAMP=$(TZ="America/Los_Angeles" date +"%Y-%m-%d_%H-%M-%S")
 
 # Create a backup folder with the timestamp
 BACKUP_FOLDER="${BACKUPS_PATH}backup_${TIMESTAMP}"
