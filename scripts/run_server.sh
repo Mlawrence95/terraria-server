@@ -18,7 +18,7 @@ start_server_in_background() {
   echo "Starting Terraria server in a screen session..."
 
   # Create a new screen session and run the Terraria server
-  screen -dmS terraria-server bash -c "$SERVER_BINARY_PATH -config serverconfig.txt >> ${LOG_FILE_PATH} 2>&1"
+  screen -dmS terraria-server bash -c "$SERVER_BINARY_PATH -config serverconfig.txt 2>&1 | tee -a ${LOG_FILE_PATH}"
   echo "Server started in screen session 'terraria-server'."
   echo "To reattach to the screen session, run: screen -r terraria-server"
   echo "To leave session, use Ctrl + a  then  d"
