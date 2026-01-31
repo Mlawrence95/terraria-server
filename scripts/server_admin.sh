@@ -42,4 +42,6 @@ set_time_to_day() {
 get_online_players() {
     echo "Getting online players..."
     send_command_to_terraria_server "playing"
+    sleep 1
+    tail -2 ${LOG_FILE_PATH}
 }
