@@ -1,0 +1,10 @@
+# Set like:
+# crontab /path/to/this/file
+# See existing crontab config like,
+# crontab -l
+
+# Check for game updates every night at 3 AM
+0 3 * * * /home/user/terraria/scripts/check_version.sh >> /home/user/terraria/logs/version_check.log 2>&1
+
+# (Optional) Backup the world every 6 hours
+0 */6 * * * /home/user/terraria/scripts/backup_world.sh >> /home/user/terraria/logs/backup.log 2>&1
