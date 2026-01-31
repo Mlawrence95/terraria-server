@@ -4,6 +4,8 @@ set -ex
 
 # Load constants
 source ~/terraria/terraria-server/scripts/shared_variables.sh
+source ~/terraria/terraria-server/scripts/ping_discord.sh
+
 
 # Fetch the page source containing the changenotes table
 PAGE_SOURCE=$(curl -s "https://terraria.wiki.gg/wiki/Desktop_version_history")
@@ -22,3 +24,9 @@ VERSION_CLEAN=$(echo "${VERSION_DOTS}" | tr -d '.')
 
 
 echo "Found Version: ${VERSION_CLEAN} on Wiki. We are pinned to version ${VERSION_SHORTNAME}."
+
+if [ "${VERSION_CLEAN}" !=  "${VERSION_SHORTNAME}" ]; then
+    send_discord_message "🌲 Found new Terraria server version. Please rollout ASAP"
+else
+    send_discord_message "🌲 Versions are up to date."
+fi
