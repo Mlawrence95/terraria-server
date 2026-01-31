@@ -38,3 +38,8 @@ set_time_to_day() {
     echo "Setting time to day..."
     send_command_to_terraria_server "dawn"
 }
+
+get_online_players() {
+    echo "Getting online players..."
+    send_command_to_terraria_server "playing"
+}
