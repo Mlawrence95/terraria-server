@@ -1,3 +1,4 @@
+# Load constants
 source ~/terraria/terraria-server/scripts/shared_variables.sh
 
 # Provides private API key through the webhook url.

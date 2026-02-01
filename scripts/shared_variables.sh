@@ -1,19 +1,19 @@
-WORKSPACE_ROOT=$(realpath ~/terraria/terraria-server)
+export WORKSPACE_ROOT=$(realpath ~/terraria/terraria-server)
 
 echo "Resolved workspace root path to ${WORKSPACE_ROOT}"
 # Pick one from https://terraria.wiki.gg/wiki/Server#Server_files
-SERVER_URL=https://terraria.org/api/download/pc-dedicated-server/terraria-server-1453.zip
-VERSION_SHORTNAME=1453
+export SERVER_URL=https://terraria.org/api/download/pc-dedicated-server/terraria-server-1453.zip
+export VERSION_SHORTNAME=1453
 
-EXE_ROOT=${WORKSPACE_ROOT}/${VERSION_SHORTNAME}/Linux/
-SERVER_BINARY_PATH=${EXE_ROOT}/TerrariaServer.bin.x86_64
+export EXE_ROOT=${WORKSPACE_ROOT}/${VERSION_SHORTNAME}/Linux/
+export SERVER_BINARY_PATH=${EXE_ROOT}/TerrariaServer.bin.x86_64
 
-TMUX_SESSION_NAME="terraria-server-session"
+export TMUX_SESSION_NAME="terraria-server-session"
 
-SERVER_CONFIG_PATH=${WORKSPACE_ROOT}/game_logic/serverconfig.txt
-WORLD_SAVES_PATH=${WORKSPACE_ROOT}/worlds
-WORLD_FILE_PATH=${WORLD_SAVES_PATH}/main_world_file.wld
-BACKUPS_PATH=~/backups/
-LOG_FILE_PATH=${WORKSPACE_ROOT}/server_logs.txt
+export SERVER_CONFIG_PATH=${WORKSPACE_ROOT}/game_logic/serverconfig.txt
+export WORLD_SAVES_PATH=${WORKSPACE_ROOT}/worlds
+export WORLD_FILE_PATH=${WORLD_SAVES_PATH}/main_world_file.wld
+export BACKUPS_PATH=~/backups/
+export LOG_FILE_PATH=${WORKSPACE_ROOT}/server_logs.txt
 
 echo "Loaded constants from shared variables file!"
