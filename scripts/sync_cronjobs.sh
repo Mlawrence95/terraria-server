@@ -9,6 +9,7 @@ if [ ! -f "${CRONTAB_CONFIG_PATH}" ]; then
 fi
 
 echo "Setting crontab..."
+chmod +x ${WORKSPACE_ROOT}/scripts/*.sh
 crontab ${CRONTAB_CONFIG_PATH} || { echo "Failed to set crontab! Exiting."; exit 1; }
 
 echo "New cron config is $(crontab -l)"
