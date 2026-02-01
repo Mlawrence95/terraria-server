@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load constants
-source ~/terraria/terraria-server/scripts/shared_variables.sh
+source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
 
 # Baseline admin function: send command to background process
 send_command_to_terraria_server() {

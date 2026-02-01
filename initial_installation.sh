@@ -6,7 +6,7 @@ sudo apt update && sudo apt install -y "${DEPENDENCIES[@]}"
 
 # Set up path for terraria files (doesnt have to be here tho)
 # SERVER_ROOT=/home/${USER}/terraria
-SERVER_ROOT=~/terraria
+SERVER_ROOT="${HOME}/terraria"
 mkdir -p $SERVER_ROOT && cd $SERVER_ROOT
 
 # Get initial install. Use `git pull origin main` to sync

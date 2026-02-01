@@ -4,7 +4,7 @@
 set -ex
 
 # Load constants
-source ~/terraria/terraria-server/scripts/shared_variables.sh
+source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
 
 # Backup world, remove old server files, then install new ones
 bash ${WORKSPACE_ROOT}/scripts/run_backup.sh

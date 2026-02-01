@@ -1,7 +1,7 @@
 #!/bin/bash
 set +ex
 # Load constants
-source ~/terraria/terraria-server/scripts/shared_variables.sh
+source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
 
 # Get current date and time in the format YYYY-MM-DD_HH-MM-SS
 TIMESTAMP=$(TZ="America/Los_Angeles" date +"%Y-%m-%d_%H-%M-%S")

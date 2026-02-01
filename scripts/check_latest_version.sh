@@ -3,8 +3,8 @@
 set -ex
 
 # Load constants
-source ~/terraria/terraria-server/scripts/shared_variables.sh
-source ~/terraria/terraria-server/scripts/ping_discord.sh
+source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
+source "${WORKSPACE_ROOT}/scripts/ping_discord.sh"
 
 
 # Fetch the page source containing the changenotes table

@@ -1,0 +1,22 @@
+# Set like:
+# crontab /path/to/this/file
+# See existing crontab config like,
+# crontab -l
+
+SHELL=/bin/bash
+HOME=/home/${USER}
+BASE_DIR=${HOME}/terraria/terraria-server
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+# Check for game updates every night at 5 AM
+0 5 * * * echo "$(date) - Running version check" >> ${BASE_DIR}/version_check.log; ${BASE_DIR}/scripts/check_version.sh >> ${BASE_DIR}/version_check.log 2>&1
+
+# * * * * *  command_to_run
+# - - - - -
+# | | | | |
+# | | | | +---- Day of the week (0-7, where 0 and 7 are Sunday)
+# | | | +------ Month (1-12)
+# | | +-------- Day of the month (1-31)
+# | +---------- Hour (0-23)
+# +------------ Minute (0-59)
+# */K means "run every K <unit>" and a static number is that literal time.
