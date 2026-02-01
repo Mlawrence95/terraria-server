@@ -16,4 +16,6 @@ export WORLD_FILE_PATH=${WORLD_SAVES_PATH}/main_world_file.wld
 export BACKUPS_PATH=~/backups/
 export LOG_FILE_PATH=${WORKSPACE_ROOT}/server_logs.txt
 
+SCREEN_SESSION_NAME=terraria-server
+
 echo "Loaded constants from shared variables file!"
