@@ -2,12 +2,12 @@ echo "Starting full flash of bare server."
 set -ex
 
 # Load constants
-source ~/terraria/terraria-server/scripts/shared_variables.sh
+source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
 
 # If worlds path already exists, make a backup just in case
 if [ -e "${WORLD_SAVES_PATH}" ]; then
     echo "Making a backup out of caution"
-    ./scripts/run_backup.sh
+    ${WORKSPACE_ROOT}/scripts/run_backup.sh
 fi
 
 echo "Getting terraria server files and formatting them"

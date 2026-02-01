@@ -1,8 +1,8 @@
 # Load constants
-source ~/terraria/terraria-server/scripts/shared_variables.sh
+source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
 
 # Provides private API key through the webhook url.
-source ${WORKSPACE_ROOT}/.env
+source "${WORKSPACE_ROOT}/.env"
 
 function send_discord_message {
     MESSAGE=$1

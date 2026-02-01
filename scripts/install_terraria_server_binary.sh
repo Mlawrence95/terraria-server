@@ -3,7 +3,7 @@
 # bash install_terraria_server_binary.sh
 
 # Load constants
-source ~/terraria/terraria-server/scripts/shared_variables.sh
+source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
 
 if [[ -x "$SERVER_BINARY_PATH" ]]; then
   echo "Terraria server binary already installed at:"
