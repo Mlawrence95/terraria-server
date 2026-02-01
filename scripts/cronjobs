@@ -1,7 +1,11 @@
 # Set like:
 # crontab /path/to/this/file
+
 # See existing crontab config like,
 # crontab -l
+
+# See system logs:
+# grep CRON /var/log/syslog
 
 SHELL=/bin/bash
 HOME=/home/${USER}
