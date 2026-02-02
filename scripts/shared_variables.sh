@@ -1,3 +1,6 @@
+# Don't allow any references to unset vars.
+set -u
+
 export WORKSPACE_ROOT="${HOME}/terraria/terraria-server"
 cd "${WORKSPACE_ROOT}" || exit
 echo "Resolved workspace root path to ${WORKSPACE_ROOT}"

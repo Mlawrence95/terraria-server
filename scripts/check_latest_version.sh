@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+set -e
 
 # Load constants
 source "${HOME}/terraria/terraria-server/scripts/shared_variables.sh"
