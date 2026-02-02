@@ -11,10 +11,10 @@ SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Check for game updates every night at 5 AM
-*/2 * * * * echo "$(TZ=America/Los_Angeles date) - Running version check" >> $HOME/terraria/terraria-server/version_check.log; $HOME/terraria/terraria-server/scripts/check_latest_version.sh >> $HOME/terraria/terraria-server/version_check.log 2>&1
+* */6 * * * echo "$(TZ=America/Los_Angeles date) - Running version check" >> $HOME/terraria/terraria-server/version_check.log; $HOME/terraria/terraria-server/scripts/check_latest_version.sh >> $HOME/terraria/terraria-server/version_check.log 2>&1
 
-# Dump debug info to disk
-* * * * * env | sort > /tmp/cron.env
+# Dump env debug info to disk
+# * * * * * env | sort > /tmp/cron.env
 
 # * * * * *  command_to_run
 # - - - - -
