@@ -8,12 +8,10 @@
 # grep CRON /var/log/syslog
 
 SHELL=/bin/bash
-HOME=/home/${USER}
-BASE_DIR=${HOME}/terraria/terraria-server
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Check for game updates every night at 5 AM
-0 5 * * * echo "$(TZ=America/Los_Angeles date) - Running version check" >> ${BASE_DIR}/version_check.log; ${BASE_DIR}/scripts/check_latest_version.sh >> ${BASE_DIR}/version_check.log 2>&1
+*/2 * * * * echo "$(TZ=America/Los_Angeles date) - Running version check" >> $HOME/terraria/terraria-server/version_check.log; $HOME/terraria/terraria-server/scripts/check_latest_version.sh >> $HOME/terraria/terraria-server/version_check.log 2>&1
 
 # Dump debug info to disk
 * * * * * env | sort > /tmp/cron.env
