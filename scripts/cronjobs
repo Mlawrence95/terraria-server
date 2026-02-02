@@ -11,7 +11,7 @@ SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Check for game updates every 6 hours
-* */6 * * * echo "$(TZ=America/Los_Angeles date) - Running version check" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/check_latest_version.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
+0 */6 * * * echo "$(TZ=America/Los_Angeles date) - Running version check" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/check_latest_version.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
 
 # Ping the server with water reminders every 30 minutes
 */30 * * * * echo "$(TZ=America/Los_Angeles date) - Water break" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/water_reminder.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
