@@ -43,5 +43,33 @@ get_online_players() {
     echo "Getting online players..."
     send_command_to_terraria_server "playing"
     sleep 1
-    tail -2 ${LOG_FILE_PATH}
+    tail -n 2 "${LOG_FILE_PATH}"
+}
+
+restart_server_gracefully() {
+    send_global_message "Server is restarting. See you in a minute!"
+    exit_server
+
+    echo "Waiting for process to terminate..."
+    while screen -list | grep "${SCREEN_SESSION_NAME}"; do
+        echo "Waiting..."
+        sleep 2
+    done
+
+    echo "Restarting server..."
+    "${HOME}/terraria/terraria-server/scripts/run_server.sh"
+}
+
+restart_server_with_global_message_warning() {
+    echo "Starting graceful restart sequence..."
+
+    send_global_message "Server restart in 60 seconds. Please finish your tasks!"
+    sleep 30
+    
+    send_global_message "Server restart in 30 seconds."
+    sleep 20
+
+    send_global_message "Server restarting in 10 seconds!"
+    sleep 10
+    restart_server_gracefully
 }
