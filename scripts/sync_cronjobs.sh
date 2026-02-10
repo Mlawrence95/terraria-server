@@ -9,6 +9,7 @@ if [ ! -f "${CRONTAB_CONFIG_PATH}" ]; then
 fi
 
 # Set system time to Pacific time.
+# Double check by calling $ timedatectl
 sudo timedatectl set-timezone America/Los_Angeles
 
 echo "Setting crontab..."
