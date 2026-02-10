@@ -8,9 +8,12 @@ if [ ! -f "${CRONTAB_CONFIG_PATH}" ]; then
   exit 1
 fi
 
+# Set system time to Pacific time.
+sudo timedatectl set-timezone America/Los_Angeles
+
 echo "Setting crontab..."
 chmod +x ${WORKSPACE_ROOT}/scripts/*.sh
 chmod +x ${WORKSPACE_ROOT}/scripts/chores/*.sh
 crontab ${CRONTAB_CONFIG_PATH} || { echo "Failed to set crontab! Exiting."; exit 1; }
-
+sudo systemctl restart cron
 echo "New cron config is $(crontab -l)"
