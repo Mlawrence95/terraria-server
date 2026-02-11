@@ -28,5 +28,5 @@ echo "Found Version: ${VERSION_CLEAN} on Wiki. We are pinned to version ${VERSIO
 if [ "${VERSION_CLEAN}" !=  "${VERSION_SHORTNAME}" ]; then
     send_discord_message "🌲 Found new Terraria server version. Please rollout ASAP"
 else
-    send_discord_message "🌲 Versions are up to date."
+    echo "🌲 Versions are up to date."
 fi
