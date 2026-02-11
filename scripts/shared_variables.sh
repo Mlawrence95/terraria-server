@@ -7,8 +7,8 @@ echo "Resolved workspace root path to ${WORKSPACE_ROOT}"
 
 # Binary info
 # Pick one from https://terraria.wiki.gg/wiki/Server#Server_files
-export SERVER_URL="https://terraria.org/api/download/pc-dedicated-server/terraria-server-1454.zip"
-export VERSION_SHORTNAME=1454
+export SERVER_URL="https://terraria.org/api/download/pc-dedicated-server/terraria-server-1455.zip"
+export VERSION_SHORTNAME=1455
 export EXE_ROOT="${WORKSPACE_ROOT}/${VERSION_SHORTNAME}/Linux/"
 export SERVER_BINARY_PATH="${EXE_ROOT}/TerrariaServer.bin.x86_64"
 
