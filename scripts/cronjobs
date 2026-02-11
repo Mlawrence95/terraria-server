@@ -13,11 +13,11 @@ CRON_TZ=America/Los_Angeles
 TZ=America/Los_Angeles
 
 
-# Check for game updates every 6 hours
-0/30 * * * * echo "$(date) - Running version check" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/chores/check_latest_version.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
+# Check for game updates every 30 minutes
+*/30 * * * * echo "$(date) - Running version check" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/chores/check_latest_version.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
 
 # Restart server at 5am every day.
-* 5 * * * echo "$(date) - Starting server reboot process" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/chores/nightly_reboot.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
+0 5 * * * echo "$(date) - Starting server reboot process" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/chores/nightly_reboot.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
 
 # Ping the server with water reminders every 30 minutes
 */30 * * * * echo "$(date) - Water break" >> $HOME/terraria/terraria-server/cron.log; $HOME/terraria/terraria-server/scripts/chores/water_reminder.sh >> $HOME/terraria/terraria-server/cron.log 2>&1
