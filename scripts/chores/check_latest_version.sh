@@ -47,7 +47,7 @@ function maybe_upgrade_server_version {
     echo "Found Version: ${INFERRED_VERSION} on Wiki. We are pinned to version ${VERSION_SHORTNAME}."
 
     if [ "${INFERRED_VERSION}" !=  "${VERSION_SHORTNAME}" ]; then
-        send_discord_message "🌲 Found new Terraria server version. Please rollout ASAP. Attemping automated rollout first..."
+        send_discord_message "🌲 @everyone Found new Terraria server version. Please rollout ASAP. Attemping automated rollout first..."
         set_version_in_constants_file ${INFERRED_VERSION}
         bash "${WORKSPACE_ROOT}/scripts/update_server_version.sh"
         restart_server_with_global_message_warning
