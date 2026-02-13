@@ -47,7 +47,6 @@ get_online_players() {
 }
 
 start_server() {
-    bash WORKSPACE_ROOT
     bash "${WORKSPACE_ROOT}/scripts/run_server.sh"
 }
 
