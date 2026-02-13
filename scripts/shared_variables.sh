@@ -7,8 +7,8 @@ echo "Resolved workspace root path to ${WORKSPACE_ROOT}"
 
 # Binary info
 # Pick one from https://terraria.wiki.gg/wiki/Server#Server_files
-export SERVER_URL="https://terraria.org/api/download/pc-dedicated-server/terraria-server-1455.zip"
 export VERSION_SHORTNAME=1455
+export SERVER_URL="https://terraria.org/api/download/pc-dedicated-server/terraria-server-${VERSION_SHORTNAME}.zip"
 export EXE_ROOT="${WORKSPACE_ROOT}/${VERSION_SHORTNAME}/Linux/"
 export SERVER_BINARY_PATH="${EXE_ROOT}/TerrariaServer.bin.x86_64"
 
@@ -22,3 +22,5 @@ export CRONTAB_CONFIG_PATH="${WORKSPACE_ROOT}/scripts/cronjobs"
 
 # Background process session management
 export SCREEN_SESSION_NAME=terraria-server
+
+echo "Targeting binary at ${SERVER_BINARY_PATH}"
