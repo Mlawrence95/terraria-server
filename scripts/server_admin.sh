@@ -69,12 +69,12 @@ restart_server_with_global_message_warning() {
     echo "Starting graceful restart sequence..."
 
     send_global_message "Server restart in 60 seconds. Please finish your tasks!"
-    sleep 30
+    # sleep 30
     
     send_global_message "Server restart in 30 seconds."
-    sleep 20
+    # sleep 20
 
     send_global_message "Server restarting in 10 seconds!"
-    sleep 10
+    # sleep 10
     restart_server_gracefully
 }
