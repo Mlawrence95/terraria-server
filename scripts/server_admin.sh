@@ -46,6 +46,11 @@ get_online_players() {
     tail -n 2 "${LOG_FILE_PATH}"
 }
 
+start_server() {
+    bash WORKSPACE_ROOT
+    bash "${WORKSPACE_ROOT}/scripts/run_server.sh"
+}
+
 restart_server_gracefully() {
     send_global_message "Server is restarting. See you in a minute!"
     exit_server
@@ -57,7 +62,7 @@ restart_server_gracefully() {
     done
 
     echo "Restarting server..."
-    "${HOME}/terraria/terraria-server/scripts/run_server.sh"
+    start_server
 }
 
 restart_server_with_global_message_warning() {
